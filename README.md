@@ -38,7 +38,6 @@ The Virtual Closet app is built with:
 ## Getting Started
 
 ### Prerequisites
-Ensure you have the following installed:
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 
