@@ -17,7 +17,7 @@ The **Virtual Closet** app is a microservices-based application designed to help
 The Virtual Closet app is built with:
 
 - **Frontend**:
-  - [Svelte](https://svelte.dev): A lightweight and reactive JavaScript framework.
+  - [Svelte](https://svelte.dev)
   - Hosted on port `8080`.
 
 - **Backend**:
@@ -92,7 +92,7 @@ The app uses RESTful APIs exposed via the Gateway Service.
 ---
 
 ## Known Issues
-- Currently deployed locally. Frontend cannot communite with backend via Docker. Bugs still exist
+- Currently deployed locally. Frontend cannot communicate with backend via Docker. Bugs still exist
 
 ---
 
