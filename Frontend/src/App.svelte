@@ -23,7 +23,7 @@
   
   async function handleLogin() {
     try {
-      const response = await fetch("http://localhost:5005/login", {
+      const response = await fetch("http://gateway-service:5005/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
@@ -45,7 +45,7 @@
 
   async function handleRegister() {
     try {
-      const response = await fetch("http://localhost:5005/register", {
+      const response = await fetch("http://gateway_service:5005/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: regUsername, password: regPassword }),
@@ -65,7 +65,7 @@
 
   async function fetchItems() {
     try {
-      const response = await fetch(`http://localhost:5005/items?user_id=${userId}`);
+      const response = await fetch(`http://gateway_service:5005/items?user_id=${userId}`);
       if (!response.ok) throw new Error("Failed to fetch items");
       items = await response.json();
     } catch (error) {
@@ -81,7 +81,7 @@
 
   async function addItem() {
     try {
-      const response = await fetch("http://localhost:5005/items", {
+      const response = await fetch("http://gateway_service:5005/items", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -104,7 +104,7 @@
 
   async function deleteItem(itemId) {
     try {
-      const response = await fetch(`http://localhost:5005/items/${itemId}`, {
+      const response = await fetch(`http://gateway_service:5005/items/${itemId}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ user_id: userId }),
@@ -123,7 +123,7 @@
     if (!editItem || !editItem.id) return;
 
     try {
-      const response = await fetch(`http://localhost:5005/items/${editItem.id}`, {
+      const response = await fetch(`http://gateway_service:5005/items/${editItem.id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -146,7 +146,7 @@
 
   async function fetchAnalytics() {
     try {
-      const response = await fetch(`http://localhost:5005/analytics?user_id=${userId}`);
+      const response = await fetch(`http://gateway_service:5005/analytics?user_id=${userId}`);
       if (!response.ok) throw new Error("Failed to fetch analytics");
       analytics = await response.json();
     } catch (error) {
